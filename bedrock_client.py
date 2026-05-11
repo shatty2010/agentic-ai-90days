@@ -90,7 +90,7 @@ def chat(user_message: str, backend: str = "anthropic", system_message: str = "Y
 if __name__ == "__main__":
     prompt = "In one sentence, what is a microservice?"
 
-    for backend in ["anthropic", "azure"]:
+    for backend in ["anthropic", "bedrock", "azure"]:
         try:
             result = chat(prompt, backend=backend)
             print(f"\n[{result['backend'].upper()}]")
