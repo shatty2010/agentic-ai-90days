@@ -363,20 +363,13 @@ def run_agent(question: str) -> str:
 
 if __name__ == "__main__":
     test_questions = [
-        # 1. Single tool — Wikipedia only
-        "Who invented the World Wide Web?",
 
         # 2. Two tools in parallel — Claude should call both in one step
-        "What is the weather in Tokyo and what is 150 USD in JPY right now?",
-
-        # 3. Two tools in sequence — Wikipedia to find capital, then weather for it
-        "What is the capital of Australia, and what is the weather there today?",
+        "What is the weather in XYZNOTACITY and what is 150 USD in JPY right now?",
 
         # 4. No tool needed — Claude answers from its own knowledge
-        "What is 2 + 2?",
+        "What is 10/0?"
 
-        # 5. Ambiguous — 'search' could mean Wikipedia; watch which tool Claude picks
-        "Search for information about the Python programming language.",
     ]
 
     for q in test_questions:
